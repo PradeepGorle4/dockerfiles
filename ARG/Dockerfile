@@ -1,4 +1,6 @@
-FROM almalinux:9
+ARG version
+FROM almalinux:${version:-9} 
+# :-9 indicates that if user do not provide any version, take 9 as default
 ENV course="devops with aws" \
     trainer="siva kumar reddy" \
     duration="120hrs" \
