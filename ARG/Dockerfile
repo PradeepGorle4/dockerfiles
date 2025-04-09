@@ -6,6 +6,8 @@ ENV course="devops with aws" \
     duration="120hrs" \
     currentlearning="docker"
 ARG name=PradeepG
+# if you want to set ARG to be accessible inside container, just do the below
+ENV name=${name}
 # RUN echo "Hello ${trainer}" > /tmp/hello.txt
 RUN echo "Hello ${name}, image version: ${version}" > /tmp/hello.txt
 CMD ["sleep", "100"]
